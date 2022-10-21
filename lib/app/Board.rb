@@ -11,7 +11,6 @@ class Board
     @board_case = Array.new(9) {|e| BoardCase.new(e)}
     @count_turn = 1
   end
-<<<<<<< HEAD
 
   def getBoard
     @board_case
@@ -21,9 +20,6 @@ class Board
     @count_turn
   end
 
-=======
-  
->>>>>>> 07fd8763f9417a538de49985f3bba871111695dd
   def play_turn(value, position)
 
     if @board_case[position].getValue == "" 

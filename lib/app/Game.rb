@@ -18,29 +18,10 @@ class Game
     
     @board = Board.new
     @status = "on going t'as capté"
-<<<<<<< HEAD
     @player = [Player.new(player1, "X"), Player.new(player2, "O")]
     @current_player = (@player.shuffle)[0]
 
     puts "" + @current_player.getName + "(" + @current_player.getValue + ") c'est à toi de jouer !"
-=======
-    @player = [Player.new(player1, sign), Player.new(player2, sign)]
-    @current_player = @player[0] 
-    puts "________________________
-    ╔═╗╗╔═╗╔═╗╔╦╗
-    ║   ║╣ ╚═╗ ║ 
-    ╚═╝ ╚═╝╚═╝ ╩ 
-    **********************
-    #{@current_player.name}!!
-    **********************
-    ╔═╗ ╦ ╦ ╦
-    ║ ║ ║ ║ ║
-    ╚═╬ ╚═╝ ╩ 
-    ╔═╗╔═╗╔╦╗╔╦╗╔═╗╔╗╔╔═╗╔═╗
-    ║  ║ ║║║║║║║║╣ ║║║║  ║╣ 
-    ╚═╝╚═╝╩ ╩╩ ╩╚═╝╝╚╝╚═╝╚═╝
-    ________________________"
->>>>>>> 07fd8763f9417a538de49985f3bba871111695dd
   end
 
   def turn
@@ -90,38 +71,9 @@ class Game
     
   def game_end
     if (@status == "nul")
-      puts 
-        "_______________________________
-              ╔═╗╔═╗╔═╗╦  ╦╔╦╗╔═╗   
-              ║╣ ║ ╦╠═╣║  ║ ║ ║╣    
-              ╚═╝╚═╝╩ ╩╩═╝╩ ╩ ╚═╝   
-            ╔═╗╔═╗╦═╗╔═╗╔═╗╔╗╔╗╔╔═╗
-            ╠═╝║╣ ╠╦╝╚═╗║ ║║║║║║║╣ 
-            ╩  ╚═╝╩╚═╚═╝╚═╝╝╚╝╚╝╚═╝
-            ╔╗╔╔═╗  ╔═╗╔═╗╔═╗╔╗╔╔═╗
-            ║║║║╣   ║ ╦╠═╣║ ╦║║║║╣ 
-            ╝╚╝╚═╝  ╚═╝╩ ╩╚═╝╝╚╝╚═╝
-        ________________________________"
+      puts "match nul !"
     else
-<<<<<<< HEAD
       puts "" + (@player.select { |p| p.getValue == @status })[0].getName + " ("+ @status +") gagne !" 
-=======
-      puts "" + @status.name + " gagne !"
-      puts "______________
-      ╔╗ ╦═╗╔═╗╦  ╦╔═╗
-      ╠╩╗╠╦╝╠═╣╚╗╔╝║ ║
-      ╚═╝╩╚═╩ ╩ ╚╝ ╚═╝
-      *****************
-      #{@status.name} !
-      *****************
-      ╔╦╗╦ ╦  ╔═╗╔═╗ 
-       ║ ║ ║  ╠═╣╚═╗ 
-       ╩ ╚═╝  ╩ ╩╚═╝ 
-      ╔═╗╔═╗╔═╗╔╗╔╔═╗
-      ║ ╦╠═╣║ ╦║║║║╣ 
-      ╚═╝╩ ╩╚═╝╝╚╝╚═╝
-      ______________"
->>>>>>> 07fd8763f9417a538de49985f3bba871111695dd
     end
   end
   
